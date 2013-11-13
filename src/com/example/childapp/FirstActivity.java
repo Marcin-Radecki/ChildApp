@@ -14,28 +14,28 @@ import android.widget.*;
 
 public class FirstActivity extends Activity {
 
-	Button ButtonPlay;
-	Button ButtonHelp;
-	Button ButtonOption;
-	Button ButtonScores;
+	Button playButton;
+	Button helpButton;
+	Button settingsButton;
+	Button highScoresButton;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_first);
 		
-		ButtonPlay = (Button) findViewById(R.id.buttonPlay);
+		playButton = (Button) findViewById(R.id.playButton);
 		
-		ButtonHelp = (Button) findViewById(R.id.buttonHelp);
+		helpButton = (Button) findViewById(R.id.helpButton);
 		
-		ButtonOption = (Button) findViewById(R.id.buttonOption);
+		settingsButton = (Button) findViewById(R.id.settingsButton);
 		
-		ButtonScores = (Button) findViewById(R.id.buttonScores);
-		
-		
+		highScoresButton = (Button) findViewById(R.id.highScoresButton);
 		
 		
-		ButtonPlay.setOnClickListener(new View.OnClickListener() {
+		
+		
+		playButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(final View arg0) {
@@ -48,7 +48,7 @@ public class FirstActivity extends Activity {
 				
 			}
 		});
-		ButtonHelp.setOnClickListener(new View.OnClickListener() {
+		helpButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(final View arg0) {
@@ -58,7 +58,7 @@ public class FirstActivity extends Activity {
 				
 			}
 		});
-		ButtonOption.setOnClickListener(new View.OnClickListener() {
+		settingsButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(final View arg0) {
@@ -71,7 +71,7 @@ public class FirstActivity extends Activity {
 				
 			}
 		});
-		ButtonScores.setOnClickListener(new View.OnClickListener() {
+		highScoresButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(final View arg0) {
