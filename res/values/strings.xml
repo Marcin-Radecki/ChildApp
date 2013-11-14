@@ -22,8 +22,13 @@
     <string name="animals">Animals</string>
     <string name="numbers">Numbers</string>
     <string name="title_activity_questions">ChildApp</string>
-    <string name="question">Question:</string>
+    <string name="question">Question</string>
+    <string name="answer1">Answer 1</string>
+    <string name="answer2">Answer 2</string>
+    <string name="answer3">Answer 3</string>
     <string name="title_activity_catch_catch">ChildApp</string>
     <string name="HelpCont">The goal of this app is the learning of children between 3 and 5 years</string>
+    <string name="correct_msg">It\'s great</string>
+    <string name="fail_msg">Try again</string>
 
 </resources>

@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wallpaper3"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -9,39 +10,44 @@
     tools:context=".QuestionsActivity" >
 
     <TextView
-        android:id="@+id/textViewQuestion"
+        android:id="@+id/questionTextView"
+        style="@style/WhiteSubHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="36dp"
         android:text="@string/question" />
 
     <Button
-        android:id="@+id/buttonAswer1"
+        android:id="@+id/answer3Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewQuestion"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
-        android:text="Button" />
+        android:layout_alignBaseline="@+id/answer2Button"
+        android:layout_alignBottom="@+id/answer2Button"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="360dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/elephant" />
 
     <Button
-        android:id="@+id/buttonAswer2"
+        android:id="@+id/answer1Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/buttonAswer1"
-        android:layout_centerVertical="true"
-        android:text="Button" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/questionTextView"
+        android:layout_marginRight="360dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/camel" />
 
     <Button
-        android:id="@+id/buttonAnswer3"
+        android:id="@+id/answer2Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/buttonAswer2"
-        android:layout_below="@+id/buttonAswer2"
-        android:layout_marginTop="22dp"
-        android:text="Button" />
+        android:layout_alignTop="@+id/questionTextView"
+        android:layout_marginLeft="170dp"
+        android:layout_marginRight="170dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/leon" />
 
 </RelativeLayout>

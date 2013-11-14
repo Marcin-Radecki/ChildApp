@@ -1,14 +1,14 @@
 package com.example.childapp;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.*;
+import android.widget.Button;
 
 public class FirstActivity extends Activity {
 
@@ -20,6 +20,8 @@ public class FirstActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_first);
+		
+		gameAudio.play(getApplicationContext(), R.raw.main_melody);
 
 		playButton = (Button) findViewById(R.id.playButton);
 
