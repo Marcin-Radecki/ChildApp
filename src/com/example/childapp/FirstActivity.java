@@ -1,7 +1,5 @@
 package com.example.childapp;
 
-
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -15,73 +13,53 @@ import android.widget.*;
 public class FirstActivity extends Activity {
 
 	Button playButton;
-	Button helpButton;
 	Button settingsButton;
 	Button highScoresButton;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_first);
-		
+
 		playButton = (Button) findViewById(R.id.playButton);
-		
-		helpButton = (Button) findViewById(R.id.helpButton);
-		
+
 		settingsButton = (Button) findViewById(R.id.settingsButton);
-		
+
 		highScoresButton = (Button) findViewById(R.id.highScoresButton);
-		
-		
-		
-		
+
 		playButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(final View arg0) {
-				
-				Intent myIntent = new Intent(FirstActivity.this, SecondActivity.class);
-				startActivity(myIntent);
-				
-				//Toast.makeText(getApplicationContext(), "Valoraciones guardadas", Toast.LENGTH_SHORT).show();
-				
-				
-			}
-		});
-		helpButton.setOnClickListener(new View.OnClickListener() {
 
-			@Override
-			public void onClick(final View arg0) {
-				
-				showMessageHelp("Help", R.string.HelpCont, "ok");
-				
-				
+				Intent myIntent = new Intent(FirstActivity.this,
+						SecondActivity.class);
+				startActivity(myIntent);
+
 			}
 		});
+
 		settingsButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(final View arg0) {
-				
-				Intent myIntent = new Intent(FirstActivity.this, SecondActivity.class);
+
+				Intent myIntent = new Intent(FirstActivity.this,
+						SecondActivity.class);
 				startActivity(myIntent);
-				
-				//Toast.makeText(getApplicationContext(), "Valoraciones guardadas", Toast.LENGTH_SHORT).show();
-				
-				
+
 			}
 		});
+
 		highScoresButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(final View arg0) {
-				
-				Intent myIntent = new Intent(FirstActivity.this, SecondActivity.class);
+
+				Intent myIntent = new Intent(FirstActivity.this,
+						SecondActivity.class);
 				startActivity(myIntent);
-				
-				//Toast.makeText(getApplicationContext(), "Valoraciones guardadas", Toast.LENGTH_SHORT).show();
-				
-				
+
 			}
 		});
 	}
@@ -92,44 +70,53 @@ public class FirstActivity extends Activity {
 		getMenuInflater().inflate(R.menu.first, menu);
 		return true;
 	}
-	public boolean onOptionsItemSelected(MenuItem item){
-		
-		/* Seg˙n el elemento activado */
+
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		/* Seg√∫n el elemento activado */
 		switch (item.getItemId()) {
 		case R.id.aboutus:
-			showMessageAbout("About us", "Antonio Cueva Fern·ndez\nAitor BaragaÒo Fern·ndez\nMarcin Radecki", "ok");
-		
-		break;
-		
+			showMessageAbout(
+					"About us",
+					"Aitor Baraga√±o Fern√°ndez\nAntonio Cueva Fern√°ndez\nMarcin Radecki",
+					"ok");
+			break;
+		case R.id.help:
+			showMessageHelp("Help", R.string.HelpCont, "ok");
+			break;
 		}
 		return false;
-		
+
 	}
+
 	private void showMessageAbout(String title, String msg, String txtButton) {
-		 new AlertDialog.Builder(this)
-		 	 .setTitle(title)
-		 	 .setIcon(R.drawable.about)
-		 	 .setMessage(msg)
-		 	 .setNeutralButton(txtButton, new DialogInterface.OnClickListener() {
-					 public void onClick(DialogInterface dialog, int which) {
-							 // Lo que se hace en el click
-						 
-					 }
-		 	 })
-		 	 .show();
+		new AlertDialog.Builder(this)
+				.setTitle(title)
+				.setIcon(R.drawable.about)
+				.setMessage(msg)
+				.setNeutralButton(txtButton,
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog,
+									int which) {
+								// Lo que se hace en el click
+
+							}
+						}).show();
 	}
+
 	private void showMessageHelp(String title, int helpcont, String txtButton) {
-		 new AlertDialog.Builder(this)
-		 	 .setTitle(title)
-		 	 .setIcon(R.drawable.help) 
-		 	 .setMessage(helpcont)
-		 	 .setNeutralButton(txtButton, new DialogInterface.OnClickListener() {
-					 public void onClick(DialogInterface dialog, int which) {
-							 // Lo que se hace en el click
-						 
-					 }
-		 	 })
-		 	 .show();
+		new AlertDialog.Builder(this)
+				.setTitle(title)
+				.setIcon(R.drawable.help)
+				.setMessage(helpcont)
+				.setNeutralButton(txtButton,
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog,
+									int which) {
+								// Lo que se hace en el click
+
+							}
+						}).show();
 	}
 
 }

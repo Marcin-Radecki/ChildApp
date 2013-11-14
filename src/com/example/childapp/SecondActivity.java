@@ -1,9 +1,9 @@
 package com.example.childapp;
 
-
-
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,42 +12,50 @@ import android.widget.*;
 
 public class SecondActivity extends Activity {
 
-	Button buttonQuestions;
-	Button ButtonCatch;
-	
+	Button questionsButton;
+	Button catchButton;
+	Button backButton;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_second);
-		
-		buttonQuestions = (Button) findViewById(R.id.buttonQuestion);
-		
-		ButtonCatch = (Button) findViewById(R.id.buttonCatch);
-		
-		buttonQuestions.setOnClickListener(new View.OnClickListener() {
+
+		questionsButton = (Button) findViewById(R.id.questionsButton);
+
+		catchButton = (Button) findViewById(R.id.catchButton);
+
+		backButton = (Button) findViewById(R.id.backButton);
+
+		questionsButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(final View arg0) {
-				
-				Intent myIntent2 = new Intent(SecondActivity.this, ChooseQuestionActivity.class);
+
+				Intent myIntent2 = new Intent(SecondActivity.this,
+						ChooseQuestionActivity.class);
 				startActivity(myIntent2);
-				
-				
-				
-				
+
 			}
 		});
-		ButtonCatch.setOnClickListener(new View.OnClickListener() {
+
+		catchButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(final View arg0) {
-				
-				Intent myIntent2 = new Intent(SecondActivity.this, CatchCatchActivity.class);
+
+				Intent myIntent2 = new Intent(SecondActivity.this,
+						CatchCatchActivity.class);
 				startActivity(myIntent2);
-				
-				
-				
-				
+
+			}
+		});
+
+		backButton.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(final View arg0) {
+				finish();
 			}
 		});
 	}
@@ -58,17 +66,32 @@ public class SecondActivity extends Activity {
 		getMenuInflater().inflate(R.menu.second, menu);
 		return true;
 	}
-public boolean onOptionsItemSelected(MenuItem item){
-		
-		/* Según el elemento activado */
+
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		/* SegÃºn el elemento activado */
 		switch (item.getItemId()) {
-		case R.id.atras:
-			finish();
-		
-		break;
-		
+		case R.id.help:
+			showMessageHelp("Help", R.string.HelpCont, "ok");
+			break;
+
 		}
 		return false;
-		
+
+	}
+	
+	private void showMessageHelp(String title, int helpcont, String txtButton) {
+		new AlertDialog.Builder(this)
+				.setTitle(title)
+				.setIcon(R.drawable.help)
+				.setMessage(helpcont)
+				.setNeutralButton(txtButton,
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog,
+									int which) {
+								// Lo que se hace en el click
+
+							}
+						}).show();
 	}
 }

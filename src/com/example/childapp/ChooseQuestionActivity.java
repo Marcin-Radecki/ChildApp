@@ -1,6 +1,5 @@
 package com.example.childapp;
 
-
 import com.example.childapp.QuestionsActivity;
 
 import android.os.Bundle;
@@ -17,72 +16,65 @@ public class ChooseQuestionActivity extends Activity {
 	Button buttonColors;
 	Button buttonAnimals;
 	Button buttonNumbers;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_chosse_question);
-		
+
 		buttonLetters = (Button) findViewById(R.id.buttonLetters);
-		
+
 		buttonColors = (Button) findViewById(R.id.buttonColors);
-		
+
 		buttonAnimals = (Button) findViewById(R.id.buttonAnimals);
-		
+
 		buttonNumbers = (Button) findViewById(R.id.buttonNumbers);
-		
+
 		buttonLetters.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(final View arg0) {
-				
-				Intent myIntent2 = new Intent(ChooseQuestionActivity.this, QuestionsActivity.class);
+
+				Intent myIntent2 = new Intent(ChooseQuestionActivity.this,
+						QuestionsActivity.class);
 				startActivity(myIntent2);
-				
-				
-				
-				
+
 			}
 		});
-		
+
 		buttonColors.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(final View arg0) {
-				
-				Intent myIntent2 = new Intent(ChooseQuestionActivity.this, QuestionsActivity.class);
+
+				Intent myIntent2 = new Intent(ChooseQuestionActivity.this,
+						QuestionsActivity.class);
 				startActivity(myIntent2);
-				
-				
-				
-				
+
 			}
 		});
-		
+
 		buttonAnimals.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(final View arg0) {
-				
-				Intent myIntent2 = new Intent(ChooseQuestionActivity.this, QuestionsActivity.class);
+
+				Intent myIntent2 = new Intent(ChooseQuestionActivity.this,
+						QuestionsActivity.class);
 				startActivity(myIntent2);
-				
-				
-				
-				
+
 			}
 		});
-		
+
 		buttonNumbers.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(final View arg0) {
-				
-				Intent myIntent2 = new Intent(ChooseQuestionActivity.this, QuestionsActivity.class);
+
+				Intent myIntent2 = new Intent(ChooseQuestionActivity.this,
+						QuestionsActivity.class);
 				startActivity(myIntent2);
-				
-				
-				
-				
+
 			}
 		});
 	}
@@ -93,18 +85,19 @@ public class ChooseQuestionActivity extends Activity {
 		getMenuInflater().inflate(R.menu.chosse_question, menu);
 		return true;
 	}
-public boolean onOptionsItemSelected(MenuItem item){
-		
-		/* Según el elemento activado */
+
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		/* Segï¿½n el elemento activado */
 		switch (item.getItemId()) {
 		case R.id.atras:
 			finish();
-		
-		break;
-		
+
+			break;
+
 		}
 		return false;
-		
+
 	}
 
 }

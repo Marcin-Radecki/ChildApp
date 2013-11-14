@@ -5,7 +5,8 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="buttonPlay">Play</string>
-    <string name="Help">Help</string>
+    <string name="help">Help</string>
+    <string name="about_us">About Us</string>
     <string name="option">Option</string>
     <string name="scores">Scores</string>
     <string name="title_activity_second">SecondActivity</string>
@@ -13,7 +14,7 @@
     <string name="questions">Questions</string>
     <string name="catchcatch">Catch</string>
     <string name="title_activity_chosse_question">ChosseQuestionActivity</string>
-    <string name="atras">Atras</string>
+    <string name="back">Back</string>
     <string name="type">Type of Questions</string>
     <string name="letters">Letters</string>
     <string name="colors">Colors</string>
@@ -27,6 +28,6 @@
     <string name="question">Question:</string>
     <string name="title_activity_catch">CatchActivity</string>
     <string name="title_activity_catch_catch">CatchCatchActivity</string>
-    <string name="HelpCont">the goal of this app is the learning of children between 3 and 5 years</string>
+    <string name="HelpCont">The goal of this app is the learning of children between 3 and 5 years</string>
 
 </resources>

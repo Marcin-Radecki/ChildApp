@@ -2,37 +2,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wallpaper3"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".SecondActivity" >
 
-    <Button
-        android:id="@+id/buttonQuestion"
+    <ImageView
+        android:id="@+id/games"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="147dp"
-        android:text="@string/questions" />
-
-    <TextView
-        android:id="@+id/textViewGame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/buttonCatch"
-        android:layout_marginTop="83dp"
-        android:text="@string/game"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:contentDescription="@string/game"
+        android:src="@drawable/games_text" />
 
     <Button
-        android:id="@+id/buttonCatch"
+        android:id="@+id/questionsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonQuestion"
-        android:layout_centerHorizontal="true"
-        android:text="@string/catchcatch" />
+        android:layout_alignLeft="@+id/games"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="370dp"
+        android:background="@drawable/questionsbutton" />
+
+    <Button
+        android:id="@+id/catchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/questionsButton"
+        android:layout_below="@+id/questionsButton"
+        android:layout_marginBottom="105dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/catchbutton" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/games"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="370dp"
+        android:background="@drawable/backbutton" />
 
 </RelativeLayout>

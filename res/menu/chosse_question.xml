@@ -4,6 +4,6 @@
         android:orderInCategory="100"
         android:showAsAction="ifRoom"
         android:icon="@drawable/iconoatras"
-        android:title="@string/atras"></item>
+        android:title="@string/back"></item>
 
 </menu>
