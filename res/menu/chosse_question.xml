@@ -1,9 +1,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <item android:id="@+id/atras"
+    <item android:id="@+id/help"
         android:orderInCategory="100"
         android:showAsAction="ifRoom"
-        android:icon="@drawable/iconoatras"
-        android:title="@string/back"></item>
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="@string/help"></item>
 
 </menu>

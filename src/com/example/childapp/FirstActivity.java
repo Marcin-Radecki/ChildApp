@@ -44,9 +44,6 @@ public class FirstActivity extends Activity {
 			@Override
 			public void onClick(final View arg0) {
 
-				Intent myIntent = new Intent(FirstActivity.this,
-						SecondActivity.class);
-				startActivity(myIntent);
 
 			}
 		});
@@ -56,9 +53,6 @@ public class FirstActivity extends Activity {
 			@Override
 			public void onClick(final View arg0) {
 
-				Intent myIntent = new Intent(FirstActivity.this,
-						SecondActivity.class);
-				startActivity(myIntent);
 
 			}
 		});
@@ -77,12 +71,12 @@ public class FirstActivity extends Activity {
 		switch (item.getItemId()) {
 		case R.id.aboutus:
 			showMessageAbout(
-					"About us",
+					"About Us",
 					"Aitor Baragaño Fernández\nAntonio Cueva Fernández\nMarcin Radecki",
-					"ok");
+					"OK");
 			break;
 		case R.id.help:
-			showMessageHelp("Help", R.string.HelpCont, "ok");
+			showMessageHelp("Help", R.string.HelpCont, "OK");
 			break;
 		}
 		return false;
@@ -98,8 +92,7 @@ public class FirstActivity extends Activity {
 						new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog,
 									int which) {
-								// Lo que se hace en el click
-
+		
 							}
 						}).show();
 	}
@@ -113,8 +106,7 @@ public class FirstActivity extends Activity {
 						new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog,
 									int which) {
-								// Lo que se hace en el click
-
+								
 							}
 						}).show();
 	}

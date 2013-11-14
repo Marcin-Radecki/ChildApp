@@ -33,7 +33,7 @@ public class SecondActivity extends Activity {
 			public void onClick(final View arg0) {
 
 				Intent myIntent2 = new Intent(SecondActivity.this,
-						ChooseQuestionActivity.class);
+						CategoriesActivity.class);
 				startActivity(myIntent2);
 
 			}
@@ -72,7 +72,7 @@ public class SecondActivity extends Activity {
 		/* Según el elemento activado */
 		switch (item.getItemId()) {
 		case R.id.help:
-			showMessageHelp("Help", R.string.HelpCont, "ok");
+			showMessageHelp("Help", R.string.HelpCont, "OK");
 			break;
 
 		}
@@ -89,7 +89,6 @@ public class SecondActivity extends Activity {
 						new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog,
 									int which) {
-								// Lo que se hace en el click
 
 							}
 						}).show();
