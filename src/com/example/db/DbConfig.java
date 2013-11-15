@@ -4,14 +4,14 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 
 public enum DbConfig {
 
-	DATABASE_TEST, TABLE_USERS, TABLE_QUESTIONS;
+	DATABASE_TEST, TABLE_USERS, TABLE_QUESTIONS, TABLE_ANSWERS;
 
 	public static final int dbDefaultVersion = 1;
 	public static final CursorFactory dbDefaultCursorFactory = null;
 
 	/**
 	 * defines in a central way the table column names from the table
-	 * {@link TableFotoConfig}
+	 * {@link TableUsersConfig}
 	 */
 	public enum TableUsersConfig {
 
@@ -27,15 +27,34 @@ public enum DbConfig {
 
 	/**
 	 * defines in a central way the table column names from the table
-	 * {@link TableVideoConfig}
+	 * {@link TableQuestionsConfig}
 	 */
 	public enum TableQuestionsConfig {
 
-		ID, QUESTION, TIMESTAMP;
+		ID, QUESTION,KIND, ANSWER, TIMESTAMP;
 		public static String generateCreateTableStatement() {
 			final String c0 = QUESTION.name() + TEXT + COMMA;
-			final String c1 = TIMESTAMP.name() + TEXT;
-			final String creteStatement = c0 + c1;
+			final String c1 = KIND.name() + TEXT + COMMA;
+			final String c2 = ANSWER.name() + INTEGER + COMMA;
+			final String c3 = TIMESTAMP.name() + TEXT;
+			final String creteStatement = c0 + c1 + c2 + c3;
+			return creteStatement;
+		}
+	}
+	
+	/**
+	 * defines in a central way the table column names from the table
+	 * {@link TableAnswersConfig}
+	 */
+	public enum TableAnswersConfig {
+
+		ID, LABEL, IMAGEPATH, QUESTIONID, TIMESTAMP;
+		public static String generateCreateTableStatement() {
+			final String c0 = LABEL.name() + TEXT + COMMA;
+			final String c1 = IMAGEPATH.name() + TEXT + COMMA;
+			final String c2 = QUESTIONID.name() + INTEGER + COMMA;
+			final String c3 = TIMESTAMP.name() + TEXT;
+			final String creteStatement = c0 + c1 + c2 + c3;
 			return creteStatement;
 		}
 	}
