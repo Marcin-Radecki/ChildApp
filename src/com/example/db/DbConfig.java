@@ -72,4 +72,5 @@ public enum DbConfig {
 	/** use it to save fotos, videos, audio, data etc. */
 	public static final String BLOB = " BLOB ";
 
+
 }

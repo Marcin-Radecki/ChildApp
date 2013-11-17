@@ -2,12 +2,12 @@ package com.example.entity;
 
 public class AnswerEntity extends Entity{
 	private String label;
-	private String imagePath;
+	private int imagePathId;
 	private int questionId;
 
 	
-	public String getImagePath() {
-		return imagePath;
+	public int getImagePathId() {
+		return imagePathId;
 	}
 	
 	public String getLabel() {
@@ -23,12 +23,13 @@ public class AnswerEntity extends Entity{
 		questionId = id;
 	}
 	
-	public AnswerEntity(String label, String imagePath) {
+	public AnswerEntity(String label, int imagePathId) {
 		super();
 		this.label = label;
-		this.imagePath = imagePath;
+		this.imagePathId = imagePathId;
 		this.questionId = -1;
 	}
+	
 	
 	
 }

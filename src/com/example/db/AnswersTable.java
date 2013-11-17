@@ -4,8 +4,8 @@ import android.content.Context;
 
 public class AnswersTable  extends Table{
 
-	public AnswersTable(Context appContext) {
-		super(appContext);
+	public AnswersTable() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 

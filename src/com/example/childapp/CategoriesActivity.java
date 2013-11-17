@@ -14,6 +14,8 @@ import android.widget.Button;
 
 public class CategoriesActivity extends Activity {
 
+	public static String CATEGORY_NAME = "CATEGORY_NAME";
+	
 	Button lettersButton;
 	Button colorsButton;
 	Button animalsButton;
@@ -42,6 +44,7 @@ public class CategoriesActivity extends Activity {
 
 				Intent myIntent2 = new Intent(CategoriesActivity.this,
 						QuestionsActivity.class);
+				myIntent2.putExtra(CATEGORY_NAME, "letters");
 				startActivity(myIntent2);
 
 			}
@@ -54,6 +57,7 @@ public class CategoriesActivity extends Activity {
 
 				Intent myIntent2 = new Intent(CategoriesActivity.this,
 						QuestionsActivity.class);
+				myIntent2.putExtra(CATEGORY_NAME, "colors");
 				startActivity(myIntent2);
 
 			}
@@ -66,6 +70,7 @@ public class CategoriesActivity extends Activity {
 
 				Intent myIntent2 = new Intent(CategoriesActivity.this,
 						QuestionsActivity.class);
+				myIntent2.putExtra(CATEGORY_NAME, "animals");
 				startActivity(myIntent2);
 
 			}
@@ -78,6 +83,7 @@ public class CategoriesActivity extends Activity {
 
 				Intent myIntent2 = new Intent(CategoriesActivity.this,
 						QuestionsActivity.class);
+				myIntent2.putExtra(CATEGORY_NAME, "numbers");
 				startActivity(myIntent2);
 
 			}

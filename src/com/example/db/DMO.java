@@ -8,16 +8,18 @@ import android.database.sqlite.SQLiteDatabase;
 public abstract class DMO {
 
 	private SQLiteDatabase db;
+	private SQLiteHelper helper;
 
-	public DMO(Context appContext, Table tableToOpen)
+	public DMO(Context appContext)
 			throws NullPointerException {
-		garantConnection(appContext, tableToOpen);
-		openTable(tableToOpen);
+		helper = new SQLiteHelper(appContext);
+		garantConnection(appContext);
+		openTable();
 	}
 
-	public void openTable(Table tableToOpen) {
+	public void openTable() {
 		if (this.db == null || !this.db.isOpen()) {
-			this.db = tableToOpen.getWritableDatabase();
+			this.db = helper.getWritableDatabase();
 		}
 	}
 
@@ -34,7 +36,6 @@ public abstract class DMO {
 	public abstract String defineDatabaseNameToCreate();
 
 	public int insert(String tableName, ContentValues rowToCreate) {
-
 		db.insert(tableName, null, rowToCreate);
 		String[] columnsToShow = null;
 		String selection = null;
@@ -47,7 +48,7 @@ public abstract class DMO {
 		query.moveToFirst();
 		int indexId = query.getColumnIndex("ID");
 		int id = query.getInt(indexId);
-		close();
+		
 		return id;
 	}
 
@@ -56,14 +57,14 @@ public abstract class DMO {
 
 		final String whereClause = "ID=" + rowIdToUpdate;
 		db.update(tableName, rowToUpdate, whereClause, null);
-		close();
+		
 	}
 
 	public void dropTable(String tableName) {
 
 		String sql = "DROP TABLE IF EXISTS " + tableName;
 		db.execSQL(sql);
-		close();
+	
 	}
 
 	public boolean dropDatabase(Context appContext, String databaseName) {
@@ -75,7 +76,7 @@ public abstract class DMO {
 		String whereClause = "ID=" + id;
 		String[] whereArgs = null;
 		db.delete(tableName, whereClause, whereArgs);
-		close();
+		
 	}
 
 	public Cursor selectAll(String tableName, String[] columnNamesToShow) {
@@ -140,10 +141,10 @@ public abstract class DMO {
 				groupBy, having, orderBy);
 	}
 
-	private void garantConnection(Context appContext, Table tableToOpen) {
-		if (appContext == null || tableToOpen == null) {
+	private void garantConnection(Context appContext) {
+		if (appContext == null  ) {
 			throw new NullPointerException(
-					"appContext and tableToOpen can't be set to null");
+					"appContext and  can't be set to null");
 		}
 	}
 

@@ -46,7 +46,7 @@ public class DAO {
 //	}
 	
 	public ArrayList<AnswerEntity> getAnswers() {
-		connection = new Database(context, new UsersTable(context));
+		connection = new Database(context);
 		final Cursor result = connection.selectAll(DbConfig.TABLE_ANSWERS.name(),
 				null);
 		
@@ -59,7 +59,7 @@ public class DAO {
 			String timestamp = result.getString(result
 					.getColumnIndex(DbConfig.TableAnswersConfig.TIMESTAMP
 							.name()));
-			String imagepath = result.getString(result
+			int imagepathId = result.getInt(result
 					.getColumnIndex(DbConfig.TableAnswersConfig.IMAGEPATH
 							.name()));
 			Integer questionid = result.getInt(result
@@ -69,7 +69,7 @@ public class DAO {
 					.getColumnIndex(DbConfig.TableAnswersConfig.ID
 							.name()));
 		
-			AnswerEntity entity = new AnswerEntity(label, imagepath);
+			AnswerEntity entity = new AnswerEntity(label, imagepathId);
 			entity.setId(id);
 			entity.setQuesionId(questionid);
 			list.add(entity);
@@ -85,8 +85,8 @@ public class DAO {
 	public List<QuestionEntity> getQuestions() {
 		ArrayList<AnswerEntity> answers = getAnswers();
 		
-		connection = new Database(context, new UsersTable(context));
-		final Cursor result = connection.selectAll(DbConfig.TABLE_USERS.name(),
+		connection = new Database(context);
+		final Cursor result = connection.selectAll(DbConfig.TABLE_QUESTIONS.name(),
 				null);
 		
 		List<QuestionEntity> list = new ArrayList<QuestionEntity>();
@@ -145,15 +145,16 @@ public class DAO {
 		fotoRowToCreate.put(DbConfig.TableAnswersConfig.LABEL.name(),
 				answer.getLabel());
 		fotoRowToCreate.put(DbConfig.TableAnswersConfig.IMAGEPATH.name(),
-				answer.getImagePath());
+				answer.getImagePathId());
 		fotoRowToCreate.put(DbConfig.TableAnswersConfig.QUESTIONID.name(),
 				answer.getQuestionId());
 		fotoRowToCreate.put(DbConfig.TableAnswersConfig.TIMESTAMP.name(),
 				answer.getTimeStamp());
 		
-		connection = new Database(context, new AnswersTable(context));
+		connection = new Database(context);
 		final int newRowIndex = connection.insert(
 				DbConfig.TABLE_ANSWERS.name(), fotoRowToCreate);
+		connection.close();
 		return newRowIndex;
 	}
 	
@@ -163,12 +164,15 @@ public class DAO {
 				question.getQuestion());
 		fotoRowToCreate.put(DbConfig.TableQuestionsConfig.TIMESTAMP.name(),
 				question.getTimeStamp());
+		fotoRowToCreate.put(DbConfig.TableQuestionsConfig.KIND.name(),
+				question.getQuestionType());
 		fotoRowToCreate.put(DbConfig.TableQuestionsConfig.ANSWER.name(),
 				question.getAnswer());
 	
-		connection = new Database(context, new QuestionsTable(context));
+		connection = new Database(context);
 		final int newRowIndex = connection.insert(
 				DbConfig.TABLE_QUESTIONS.name(), fotoRowToCreate);
+		connection.close();
 		
 		for(AnswerEntity ae: question.getAnswers()) {
 			ae.setQuesionId(newRowIndex);
@@ -178,4 +182,12 @@ public class DAO {
 		return newRowIndex;
 	}
 
+	public void FillDatabaseWithData() {
+		for (QuestionEntity entity: QuestionEntity.CreateQuestions())
+			addQuestion(entity);
+		// jus`t for debug
+		ArrayList<QuestionEntity> list = (ArrayList<QuestionEntity>) getQuestions();
+	}
+	
+	
 }

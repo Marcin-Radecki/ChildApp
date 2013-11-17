@@ -4,8 +4,8 @@ import android.content.Context;
 
 public class UsersTable extends Table {
 
-	public UsersTable(Context appContext) {
-		super(appContext);
+	public UsersTable() {
+		super();
 	}
 
 	@Override

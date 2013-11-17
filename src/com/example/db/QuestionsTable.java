@@ -4,8 +4,8 @@ import android.content.Context;
 
 public class QuestionsTable extends Table {
 
-	public QuestionsTable(Context appContext) {
-		super(appContext);
+	public QuestionsTable() {
+		super();
 	}
 
 	@Override
