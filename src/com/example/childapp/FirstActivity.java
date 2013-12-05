@@ -10,18 +10,32 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.db.DAO;
+
 public class FirstActivity extends Activity {
 
 	Button playButton;
 	Button settingsButton;
 	Button highScoresButton;
+	private DAO dao;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_first);
+<<<<<<< HEAD
 						
 		gameAudio.play(getApplicationContext(), R.raw.upbeat_feeling);
+=======
+		
+//		// database Data Object Model
+//		// use it for getting object from the database
+//		dao = new DAO(this);
+//		// just for first start
+//		dao.FillDatabaseWithData();
+				
+		gameAudio.play(getApplicationContext(), R.raw.main_melody);
+>>>>>>> d50c07cc0266843d819ac474050f06d72342984d
 
 		playButton = (Button) findViewById(R.id.playButton);
 

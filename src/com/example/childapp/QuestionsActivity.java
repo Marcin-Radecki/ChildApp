@@ -1,11 +1,20 @@
 package com.example.childapp;
 
 import java.util.ArrayList;
+<<<<<<< HEAD
 import java.util.Random;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.graphics.Typeface;
+=======
+import java.util.Date;
+import java.util.Random;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+>>>>>>> d50c07cc0266843d819ac474050f06d72342984d
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -21,10 +30,15 @@ import android.widget.TextView;
 import com.example.db.DAO;
 import com.example.entity.QuestionEntity;
 
+<<<<<<< HEAD
 public class QuestionsActivity extends Activity implements OnInitListener {
+=======
+public class QuestionsActivity extends Activity {
+>>>>>>> d50c07cc0266843d819ac474050f06d72342984d
 
 	TextView question, score;
 	Button answer1, answer2, answer3;
+<<<<<<< HEAD
 	QuestionEntity qe;
 	Dialog answerDialog, scoreDialog;
 	TextToSpeech tts;
@@ -35,12 +49,17 @@ public class QuestionsActivity extends Activity implements OnInitListener {
 	private int questionsNum;
 	private int restAttempts;
 	private int points;
+=======
+	private DAO dao;
+	private Random random = new Random(new Date().getTime());
+>>>>>>> d50c07cc0266843d819ac474050f06d72342984d
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_questions);
 
+<<<<<<< HEAD
 		gameAudio.play(getApplicationContext(), R.raw.funny_loop);
 
 		// get all questions from database
@@ -51,14 +70,30 @@ public class QuestionsActivity extends Activity implements OnInitListener {
 		String category = getIntent().getStringExtra(
 				CategoriesActivity.CATEGORY_NAME);
 		for (int i = 0; i < questionsAll.size(); i++) {
+=======
+		// get all questions from database
+		dao = new DAO(this);
+		ArrayList<QuestionEntity> questionsAll = (ArrayList<QuestionEntity>)dao.getQuestions();
+		// pick only questions with given category
+		String category = getIntent().getStringExtra(CategoriesActivity.CATEGORY_NAME);
+		ArrayList<QuestionEntity> questions = new ArrayList<QuestionEntity>();
+		for(int i = 0;i < questionsAll.size();i++) {
+>>>>>>> d50c07cc0266843d819ac474050f06d72342984d
 			QuestionEntity q = questionsAll.get(i);
 			if (q.getQuestionType().equals(category))
 				questions.add(q);
 		}
+<<<<<<< HEAD
 		// catch the max number of questions
 		questionsNum = Integer.parseInt(getIntent().getStringExtra(
 				CategoriesActivity.QUESTIONS_NUMBER));
 
+=======
+		// pick random question
+		int questionNumber = random.nextInt(questions.size());
+		QuestionEntity qe = questions.get(questionNumber);
+		
+>>>>>>> d50c07cc0266843d819ac474050f06d72342984d
 		question = (TextView) findViewById(R.id.questionTextView);
 		Typeface font = Typeface.createFromAsset(getAssets(), "children_one.otf");
 		question.setTypeface(font);
@@ -68,6 +103,7 @@ public class QuestionsActivity extends Activity implements OnInitListener {
 		answer1 = (Button) findViewById(R.id.answer1Button);
 		answer2 = (Button) findViewById(R.id.answer2Button);
 		answer3 = (Button) findViewById(R.id.answer3Button);
+<<<<<<< HEAD
 		tts = new TextToSpeech(this, this);
 
 		// restart score
@@ -76,11 +112,25 @@ public class QuestionsActivity extends Activity implements OnInitListener {
 
 		// pick random question
 		goodAnswer = nextQuestion();
+=======
+		
 
+		question.setText(qe.getQuestion());
+		Drawable d = this.getResources().getDrawable(qe.getAnswers().get(0).getImagePathId());
+		answer1.setBackground(d);
+	    d = this.getResources().getDrawable(qe.getAnswers().get(1).getImagePathId());
+		answer2.setBackground(d);
+	    d = this.getResources().getDrawable(qe.getAnswers().get(2).getImagePathId());
+		answer3.setBackground(d);
+>>>>>>> d50c07cc0266843d819ac474050f06d72342984d
+
+		final int goodAnswer = qe.getAnswer();
+		
 		answer1.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
+<<<<<<< HEAD
 				tts.speak(qe.getAnswers().get(0).getLabel(),
 						TextToSpeech.QUEUE_ADD, null);
 				if (goodAnswer == 0)
@@ -89,6 +139,12 @@ public class QuestionsActivity extends Activity implements OnInitListener {
 				else
 					showAnswerMessage(R.string.fail_title, R.drawable.cloud,
 							false);
+=======
+				if (goodAnswer == 0)
+					showAnswerMessage("CORRECT!", R.string.correct_msg, "OK");
+				else
+					showAnswerMessage("FAIL", R.string.fail_msg, "OK");
+>>>>>>> d50c07cc0266843d819ac474050f06d72342984d
 			}
 		});
 
@@ -96,6 +152,7 @@ public class QuestionsActivity extends Activity implements OnInitListener {
 
 			@Override
 			public void onClick(View v) {
+<<<<<<< HEAD
 				tts.speak(qe.getAnswers().get(1).getLabel(),
 						TextToSpeech.QUEUE_ADD, null);
 				if (goodAnswer == 1)
@@ -104,6 +161,12 @@ public class QuestionsActivity extends Activity implements OnInitListener {
 				else
 					showAnswerMessage(R.string.fail_title, R.drawable.cloud,
 							false);
+=======
+				if (goodAnswer == 1)
+					showAnswerMessage("CORRECT!", R.string.correct_msg, "OK");
+				else
+					showAnswerMessage("FAIL", R.string.fail_msg, "OK");
+>>>>>>> d50c07cc0266843d819ac474050f06d72342984d
 			}
 		});
 
@@ -111,6 +174,7 @@ public class QuestionsActivity extends Activity implements OnInitListener {
 
 			@Override
 			public void onClick(View v) {
+<<<<<<< HEAD
 				tts.speak(qe.getAnswers().get(2).getLabel(),
 						TextToSpeech.QUEUE_ADD, null);
 				if (goodAnswer == 2)
@@ -119,6 +183,12 @@ public class QuestionsActivity extends Activity implements OnInitListener {
 				else
 					showAnswerMessage(R.string.fail_title, R.drawable.cloud,
 							false);
+=======
+				if (goodAnswer == 2)
+					showAnswerMessage("CORRECT!", R.string.correct_msg, "OK");
+				else
+					showAnswerMessage("FAIL", R.string.fail_msg, "OK");
+>>>>>>> d50c07cc0266843d819ac474050f06d72342984d
 			}
 		});
 
