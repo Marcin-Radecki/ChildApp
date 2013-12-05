@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper2"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".QuestionsActivity" >
+
+    <TextView
+        android:id="@+id/questionTextView"
+        style="@style/WhiteSubHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="280dp"
+        android:text="@string/question"
+        android:textSize="70sp" />
+
+    <TextView
+        android:id="@+id/textScore"
+        style="@style/ScoreStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="750dp"
+        android:text="@string/score"
+        android:textSize="70sp" />
+
+    <Button
+        android:id="@+id/answer1Button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/camel" />
+
+    <Button
+        android:id="@+id/answer2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/answer1Button"
+        android:layout_alignTop="@+id/answer1Button"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120sp"
+        android:layout_toRightOf="@+id/answer1Button"
+        android:background="@drawable/lion" />
+
+    <Button
+        android:id="@+id/answer3Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/answer2Button"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/answer2Button"
+        android:layout_marginLeft="85dp"
+        android:background="@drawable/elephant" />
+
+</RelativeLayout>

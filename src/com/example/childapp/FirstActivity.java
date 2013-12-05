@@ -20,8 +20,8 @@ public class FirstActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_first);
-		
-		gameAudio.play(getApplicationContext(), R.raw.main_melody);
+						
+		gameAudio.play(getApplicationContext(), R.raw.upbeat_feeling);
 
 		playButton = (Button) findViewById(R.id.playButton);
 
@@ -69,7 +69,6 @@ public class FirstActivity extends Activity {
 
 	public boolean onOptionsItemSelected(MenuItem item) {
 
-		/* Según el elemento activado */
 		switch (item.getItemId()) {
 		case R.id.aboutus:
 			showMessageAbout(

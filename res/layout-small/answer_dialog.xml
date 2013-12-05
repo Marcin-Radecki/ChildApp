@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/clouds_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="3dp" >
+
+    <TextView
+        android:id="@+id/answerTitle"
+        style="@style/WhiteSubHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/correct_title" />
+
+    <ImageView
+        android:id="@+id/answerImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.59"
+        android:src="@drawable/sun" />
+
+    <Button
+        android:id="@+id/acceptButton"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:text="@string/accept_button"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#3399ff"
+        android:background="#00ffffff" />
+
+</LinearLayout>

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wallpaper3"
+    android:background="@drawable/wallpaper1"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -23,8 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="370dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="380dp"
         android:background="@drawable/backbutton" />
 
     <Button
@@ -32,9 +32,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="260dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginBottom="270dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_marginTop="110dp"
         android:background="@drawable/lettersbutton" />
 
@@ -44,9 +44,9 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/backButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="75dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginBottom="85dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_marginTop="288dp"
         android:background="@drawable/animalsbutton" />
 
@@ -54,9 +54,9 @@
         android:id="@+id/buttonNumbers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/buttonLetters"
-        android:layout_marginBottom="200dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginBottom="210dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_marginTop="167dp"
         android:background="@drawable/numbersbutton" />
 
@@ -66,9 +66,9 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/backButton"
         android:layout_alignTop="@+id/buttonNumbers"
-        android:layout_marginBottom="140dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginBottom="150dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_marginTop="61dp"
         android:background="@drawable/colorsbutton" />
 

@@ -14,7 +14,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/settingsButton"
-        android:layout_alignRight="@+id/playButton"
         android:layout_alignTop="@+id/settingsButton"
         android:layout_marginLeft="215dp"
         android:background="@drawable/highscoresbutton" />
@@ -23,7 +22,6 @@
         android:id="@+id/childAppLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/playButton"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="300dp"
         android:layout_marginTop="50dp"
@@ -34,7 +32,6 @@
         android:id="@+id/settingsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/playButton"
         android:layout_alignParentBottom="true"
         android:layout_marginRight="220dp"
         android:layout_marginTop="360dp"
@@ -48,7 +45,9 @@
         android:layout_alignBottom="@+id/settingsButton"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="130dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="220dp"
         android:background="@drawable/playbutton" />
-
 
 </RelativeLayout>

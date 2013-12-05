@@ -28,7 +28,10 @@
     <string name="answer3">Answer 3</string>
     <string name="title_activity_catch_catch">ChildApp</string>
     <string name="HelpCont">The goal of this app is the learning of children between 3 and 5 years</string>
-    <string name="correct_msg">It\'s great</string>
-    <string name="fail_msg">Try again</string>
+    <string name="correct_title">CORRECT!</string>
+    <string name="fail_title">FAIL!</string>
+    <string name="accept_button">Accept</string>
+    <string name="score">Score:  </string>
+    <string name="congratulations">Congratulations!\nYour Score is</string>
 
 </resources>
