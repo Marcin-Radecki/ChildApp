@@ -11,26 +11,25 @@
         style="@style/WhiteSubHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.22"
         android:textSize="50sp"
         android:text="@string/correct_title" />
 
     <ImageView
         android:id="@+id/answerImage"
-        android:layout_width="819dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.57"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.59"
+        android:contentDescription="@string/app_name"
         android:src="@drawable/sun" />
 
     <Button
         android:id="@+id/acceptButton"
-        android:layout_width="255dp"
+        android:layout_width="212dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.11"
-        android:background="#00ffffff"
         android:text="@string/accept_button"
+        android:textSize="50sp"
+        android:textStyle="bold"
         android:textColor="#3399ff"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+        android:background="#00ffffff" />
 
 </LinearLayout>

@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/header_logo"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textEnterYourName"
+        style="@style/WhiteSubHeader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="23dp"
+        android:layout_weight="1"
+        android:text="@string/enteryourname"
+        android:textColor="#8a902c"
+        android:textSize="45sp" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="49dp"
+        android:ems="9"
+        android:textSize="25sp"
+        android:background="#8a902c"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:hint="@string/name"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/acceptButton"
+        style="@style/WhiteSubHeader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="66dp"
+        android:layout_weight="1"
+        android:background="#00ffffff"
+        android:text="@string/accept_button"
+        android:textColor="#8a902c"
+        android:textSize="40sp" />
+
+</LinearLayout>

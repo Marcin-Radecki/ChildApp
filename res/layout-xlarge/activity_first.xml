@@ -15,16 +15,16 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/settingsButton"
         android:layout_alignTop="@+id/settingsButton"
-        android:layout_marginLeft="550dp"
+        android:layout_marginLeft="580dp"
         android:background="@drawable/highscoresbutton" />
 
     <Button
         android:id="@+id/settingsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="220dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginRight="580dp"
+        android:layout_marginTop="940dp"
         android:background="@drawable/settingsbutton" />
 
     <ImageView

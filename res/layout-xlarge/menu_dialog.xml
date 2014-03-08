@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="#FFFFBB33"
+            android:contentDescription="@string/app_name"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@+id/MenuIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/help_icon"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/textMenuTitle"
+            style="@style/WhiteSubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/help"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="50sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+       android:id="@+id/scrollView1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" >
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical" >
+           
+           <TextView
+        android:id="@+id/textMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:text="@string/HelpContFirst"
+        android:gravity="center"
+        android:textSize="40sp" />
+           
+           <Button
+        android:id="@+id/buttonAcceptMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#00ffffff"
+        android:text="@string/accept_button"
+        android:textSize="50sp" />
+           
+       </LinearLayout>
+   </ScrollView>
+
+</LinearLayout>

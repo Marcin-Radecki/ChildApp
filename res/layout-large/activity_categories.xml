@@ -9,9 +9,37 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ChosseQuestionActivity" >
 
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/backbutton" />
+
+    <Button
+        android:id="@+id/buttonNumbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonLetters"
+        android:layout_alignRight="@+id/buttonLetters"
+        android:layout_below="@+id/buttonLetters"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/numbersbutton" />
+
+    <Button
+        android:id="@+id/buttonColors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonNumbers"
+        android:layout_alignRight="@+id/buttonNumbers"
+        android:layout_below="@+id/buttonNumbers"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/colorsbutton" />
+
     <ImageView
         android:id="@+id/categories"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -19,54 +47,25 @@
         android:src="@drawable/categories_text" />
 
     <Button
-        android:id="@+id/buttonColors"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="240dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="360dp"
-        android:background="@drawable/colorsbutton" />
-
-    <Button
         android:id="@+id/buttonAnimals"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="130dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="460dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonColors"
+        android:layout_alignRight="@+id/buttonColors"
+        android:layout_below="@+id/buttonColors"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="22dp"
         android:background="@drawable/animalsbutton" />
 
     <Button
-        android:id="@+id/buttonNumbers"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="340dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="260dp"
-        android:background="@drawable/numbersbutton" />
-
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="600dp"
-        android:background="@drawable/backbutton" />
-
-    <Button
         android:id="@+id/buttonLetters"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="440dp"
-        android:layout_marginLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/categories"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
         android:layout_marginRight="50dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/lettersbutton" />
 
 </RelativeLayout>

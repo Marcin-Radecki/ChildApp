@@ -23,7 +23,7 @@
 
     <TextView
         android:id="@+id/textScore"
-        style="@style/ScoreStyle"
+        style="@style/WhiteSubHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="750dp"

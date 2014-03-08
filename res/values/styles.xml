@@ -24,13 +24,5 @@
         <item name="android:gravity">center</item>
         <item name="android:textStyle">bold</item>
     </style>
-    
-    <style name="ScoreStyle">
-        <item name="android:textColor">#ffffff</item>
-        <item name="android:typeface">normal</item>
-        <item name="android:textSize">30sp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textStyle">bold</item>
-    </style>
 
 </resources>

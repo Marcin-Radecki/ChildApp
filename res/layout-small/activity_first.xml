@@ -27,15 +27,6 @@
         android:layout_marginTop="270dp"
         android:background="@drawable/settingsbutton" />
 
-    <ImageView
-        android:id="@+id/childAppLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="180dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/logo_childapp" />
-
     <Button
         android:id="@+id/playButton"
         style="@android:style/MediaButton"
@@ -44,9 +35,19 @@
         android:layout_above="@+id/highScoresButton"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_marginTop="160dp"
         android:background="@drawable/playbutton" />
+
+    <ImageView
+        android:id="@+id/childAppLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/settingsButton"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="33dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo_childapp" />
 
 </RelativeLayout>

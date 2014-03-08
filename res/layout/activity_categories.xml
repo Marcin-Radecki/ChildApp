@@ -17,59 +17,63 @@
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/catgories"
         android:src="@drawable/categories_text" />
-    
+
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="380dp"
+        android:layout_alignParentRight="true"
         android:background="@drawable/backbutton" />
 
-    <Button
-        android:id="@+id/buttonLetters"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="270dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="110dp"
-        android:background="@drawable/lettersbutton" />
+        android:layout_above="@+id/backButton"
+        android:layout_below="@+id/categories"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/buttonAnimals"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/backButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="85dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="288dp"
-        android:background="@drawable/animalsbutton" />
+        <Button
+            android:id="@+id/buttonLetters"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/lettersbutton" />
 
-    <Button
-        android:id="@+id/buttonNumbers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="210dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="167dp"
-        android:background="@drawable/numbersbutton" />
+        <Button
+            android:id="@+id/buttonNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/numbersbutton" />
 
-    <Button
-        android:id="@+id/buttonColors"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/backButton"
-        android:layout_alignTop="@+id/buttonNumbers"
-        android:layout_marginBottom="150dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="61dp"
-        android:background="@drawable/colorsbutton" />
+        <Button
+            android:id="@+id/buttonColors"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/colorsbutton" />
+
+        <Button
+            android:id="@+id/buttonAnimals"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/animalsbutton" />
+    </LinearLayout>
 
 </RelativeLayout>

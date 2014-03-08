@@ -9,15 +9,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".FirstActivity" >
 
-    <Button
-        android:id="@+id/highScoresButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/settingsButton"
-        android:layout_alignTop="@+id/settingsButton"
-        android:layout_marginLeft="215dp"
-        android:background="@drawable/highscoresbutton" />
-
     <ImageView
         android:id="@+id/childAppLogo"
         android:layout_width="wrap_content"
@@ -29,25 +20,28 @@
         android:src="@drawable/logo_childapp" />
 
     <Button
-        android:id="@+id/settingsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="220dp"
-        android:layout_marginTop="360dp"
-        android:background="@drawable/settingsbutton" />
-
-    <Button
         android:id="@+id/playButton"
         style="@android:style/MediaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/settingsButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="130dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="220dp"
+        android:layout_centerVertical="true"
         android:background="@drawable/playbutton" />
+
+    <Button
+        android:id="@+id/highScoresButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/childAppLogo"
+        android:background="@drawable/highscoresbutton" />
+
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/childAppLogo"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/settingsbutton" />
 
 </RelativeLayout>

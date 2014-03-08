@@ -25,11 +25,10 @@
         android:id="@+id/answer3Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/answer2Button"
         android:layout_alignBottom="@+id/answer2Button"
         android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/answer2Button"
         android:layout_marginLeft="280dp"
-        android:layout_marginTop="80dp"
         android:background="@drawable/elephant" />
 
     <Button
@@ -46,6 +45,7 @@
         android:id="@+id/answer2Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/answer1Button"
         android:layout_alignTop="@+id/questionTextView"
         android:layout_marginLeft="140dp"
         android:layout_marginRight="140dp"
@@ -54,7 +54,7 @@
 
     <TextView
         android:id="@+id/textScore"
-        style="@style/ScoreStyle"
+        style="@style/WhiteSubHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/questionTextView"

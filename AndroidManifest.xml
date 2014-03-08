@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.childapp"
+    package="sdm.application.childapp"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="16"
-        android:targetSdkVersion="18" />
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
@@ -14,33 +14,43 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.childapp.FirstActivity"
+            android:name="sdm.application.childapp.FirstActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.childapp.SecondActivity"
+            android:name="sdm.application.childapp.SecondActivity"
             android:label="@string/title_activity_second"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.example.childapp.CategoriesActivity"
+            android:name="sdm.application.childapp.CategoriesActivity"
             android:label="@string/title_activity_chosse_question"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.example.childapp.QuestionsActivity"
+            android:name="sdm.application.childapp.QuestionsActivity"
             android:label="@string/title_activity_questions"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="com.example.childapp.CatchCatchActivity"
-            android:label="@string/title_activity_catch_catch" >
+            android:name="sdm.application.childapp.CatchCatchActivity"
+            android:label="@string/title_activity_catch_catch"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="sdm.application.childapp.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="sdm.application.childapp.HighScoreActivity"
+            android:label="@string/title_activity_high_score"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

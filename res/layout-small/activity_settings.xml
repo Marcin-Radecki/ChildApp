@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_wallpaper"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SettingsActivity" >
+
+    <SeekBar
+        android:id="@+id/seekBarControlSound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="81dp" />
+
+    <TextView
+        android:id="@+id/textViewSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBarControlSound"
+        android:layout_alignLeft="@+id/seekBarControlSound"
+        android:layout_marginBottom="39dp"
+        android:text="@string/SoundControl"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/buttonEnglish"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/england_flag" />
+
+    <TextView
+        android:id="@+id/textViewLanguages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/seekBarControlSound"
+        android:layout_below="@+id/seekBarControlSound"
+        android:layout_marginTop="16dp"
+        android:text="@string/Languages"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/buttonSpanish"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="90dp"
+        android:layout_marginRight="190dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/spain_flag" />
+    
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/backbutton" />
+
+</RelativeLayout>

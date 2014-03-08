@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".HighScoreActivity" 
+    android:background="@drawable/stars_background">
+
+    
+     <TextView
+        android:id="@+id/highscoreTitle"
+        style="@style/WhiteSubHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:textSize="40sp"
+        android:text="@string/highScores" />
+
+    <Button
+        android:id="@+id/acceptButtonHighScore"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        android:background="#00ffffff"
+        android:text="@string/accept_button"
+        android:textColor="#3399ff"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/listUser"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_above="@+id/acceptButtonHighScore"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/highscoreTitle"
+        android:textColor="#00ffffff" >
+
+    </ListView>
+
+</RelativeLayout>

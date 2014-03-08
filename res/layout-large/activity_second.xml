@@ -13,45 +13,40 @@
         android:id="@+id/games"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/questionsButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginBottom="200dp"
         android:contentDescription="@string/game"
         android:src="@drawable/games_text" />
 
     <Button
-        android:id="@+id/questionsButton"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/games"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="300dp"
-        android:background="@drawable/questionsbutton" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/backbutton" />
 
     <Button
         android:id="@+id/catchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/questionsButton"
+        android:layout_alignRight="@+id/questionsButton"
         android:layout_below="@+id/questionsButton"
-        android:layout_marginBottom="105dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/catchbutton" />
 
     <Button
-        android:id="@+id/backButton"
+        android:id="@+id/questionsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/games"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="620dp"
-        android:background="@drawable/backbutton" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/questionsbutton" />
 
 </RelativeLayout>
